@@ -1,38 +1,30 @@
 html
 <!DOCTYPE html>
-<html lang="ur" dir="rtl">
+<html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Nazar Websites | Modern Web Development</title>
+  <title>Nazar Websites | Professional Web Development Agency</title>
 
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Noto+Nastaliq+Urdu&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
   <style>
 
   :root{
     --bg:#0b1220;
     --card:#111c2e;
+    --text:#e5e7eb;
     --primary:#38bdf8;
     --green:#22c55e;
     --gold:#fbbf24;
-    --text:#e5e7eb;
   }
 
-  *{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-  }
+  *{margin:0;padding:0;box-sizing:border-box;font-family:'Poppins',sans-serif;}
 
   body{
-    font-family:'Poppins', sans-serif;
     background:var(--bg);
     color:var(--text);
-  }
-
-  .nastaliq{
-    font-family:'Noto Nastaliq Urdu', serif;
+    scroll-behavior:smooth;
   }
 
   /* NAV */
@@ -48,11 +40,7 @@ html
     z-index:1000;
   }
 
-  .logo{
-    color:var(--primary);
-    font-weight:700;
-    font-size:20px;
-  }
+  .logo{color:var(--primary);font-weight:700;font-size:20px;}
 
   .nav a{
     color:white;
@@ -61,44 +49,43 @@ html
     font-size:14px;
   }
 
-  .nav a:hover{
-    color:var(--primary);
-  }
+  .nav a:hover{color:var(--primary);}
 
   /* HERO */
   .hero{
-    padding:120px 10% 60px;
+    padding:130px 10% 70px;
     text-align:center;
   }
 
   .hero h1{
-    font-size:42px;
+    font-size:50px;
     margin-bottom:15px;
   }
 
-  .hero p{
-    color:#cbd5e1;
-  }
+  .hero p{color:#cbd5e1;font-size:18px;}
 
-  .btns{
-    margin-top:25px;
-  }
+  .btns{margin-top:25px;}
 
   .btn{
     display:inline-block;
-    padding:12px 20px;
+    padding:12px 22px;
     margin:5px;
     border-radius:10px;
     text-decoration:none;
     font-weight:600;
   }
 
-  .whatsapp{background:var(--green); color:white;}
-  .call{background:var(--primary); color:white;}
+  .whatsapp{background:var(--green);color:white;}
+  .call{background:var(--primary);color:white;}
 
-  /* CARDS */
-  section{
-    padding:60px 10%;
+  /* SECTIONS */
+  section{padding:70px 10%;}
+
+  h2{
+    font-size:32px;
+    margin-bottom:20px;
+    color:var(--gold);
+    text-align:center;
   }
 
   .card{
@@ -106,18 +93,12 @@ html
     padding:25px;
     border-radius:15px;
     margin-bottom:20px;
-    border-right:4px solid var(--primary);
-  }
-
-  .card h2{
-    color:var(--gold);
-    margin-bottom:10px;
   }
 
   .grid{
     display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
-    gap:15px;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:20px;
   }
 
   .box{
@@ -127,11 +108,30 @@ html
     text-align:center;
   }
 
-  /* CONTACT */
-  .contact{
-    text-align:center;
-    background:#0f172a;
-    padding:60px 10%;
+  /* CONTACT FORM */
+  form{
+    display:flex;
+    flex-direction:column;
+    gap:15px;
+    max-width:600px;
+    margin:auto;
+  }
+
+  input,textarea{
+    padding:12px;
+    border:none;
+    border-radius:8px;
+    outline:none;
+  }
+
+  button{
+    background:var(--primary);
+    color:white;
+    padding:12px;
+    border:none;
+    border-radius:8px;
+    font-weight:600;
+    cursor:pointer;
   }
 
   footer{
@@ -140,10 +140,9 @@ html
     background:#050814;
   }
 
-  /* MOBILE */
   @media(max-width:768px){
-    .hero h1{font-size:28px;}
-    .nav{flex-direction:column; gap:10px;}
+    .hero h1{font-size:32px;}
+    .nav{flex-direction:column;gap:10px;}
   }
 
   </style>
@@ -157,14 +156,15 @@ html
     <a href="#home">Home</a>
     <a href="#services">Services</a>
     <a href="#about">About</a>
+    <a href="#portfolio">Portfolio</a>
     <a href="#contact">Contact</a>
   </div>
 </div>
 
 <!-- HERO -->
 <section id="home" class="hero">
-  <h1 class="nastaliq">نظَر ویب سائٹس</h1>
-  <p>Modern & Professional Web Development Services</p>
+  <h1>Professional Web Development Agency</h1>
+  <p>Modern, fast and responsive websites for businesses, brands & startups</p>
 
   <div class="btns">
     <a class="btn whatsapp" href="https://wa.me/923704517520">WhatsApp</a>
@@ -174,35 +174,69 @@ html
 
 <!-- SERVICES -->
 <section id="services">
-  <div class="card">
-    <h2>My Services</h2>
-    <div class="grid">
-      <div class="box">Business Website</div>
-      <div class="box">Landing Page</div>
-      <div class="box">E-Commerce</div>
-    </div>
+  <h2>My Services</h2>
+  <div class="grid">
+
+    <div class="box">Business Website</div>
+    <div class="box">Landing Page</div>
+    <div class="box">E-Commerce Store</div>
+    <div class="box">Portfolio Website</div>
+    <div class="box">Restaurant Website</div>
+    <div class="box">Custom Design</div>
+
   </div>
 </section>
 
 <!-- ABOUT -->
 <section id="about">
   <div class="card">
-    <h2>About Me</h2>
+    <h2>About Nazar Websites</h2>
     <p>
-      Nazar Websites provides modern, responsive and professional websites
-      for businesses, brands and startups. Clean design, fast loading and mobile friendly.
+      We create modern and professional websites that help businesses grow online.
+      Our focus is on clean design, mobile responsiveness, fast loading speed
+      and client satisfaction.
     </p>
   </div>
 </section>
 
-<!-- CONTACT -->
-<section id="contact" class="contact">
-  <h2>Contact Me</h2>
-  <p>📞 03704517520</p>
+<!-- PORTFOLIO -->
+<section id="portfolio">
+  <h2>Portfolio</h2>
+  <div class="grid">
+    <div class="box">Restaurant Website</div>
+    <div class="box">Business Website</div>
+    <div class="box">E-Commerce Store</div>
+    <div class="box">Landing Page Design</div>
+  </div>
+</section>
 
-  <div class="btns">
-    <a class="btn whatsapp" href="https://wa.me/923704517520">WhatsApp Chat</a>
-    <a class="btn call" href="tel:03704517520">Call Now</a>
+<!-- CONTACT -->
+<section id="contact">
+  <h2>Contact Us</h2>
+
+  <div class="card">
+
+    <p style="text-align:center; margin-bottom:15px;">
+      📧 Email: nazarnaich747@gmail.com <br>
+      📞 Phone: 03704517520
+    </p>
+
+    <!-- CONTACT FORM -->
+    <form action="mailto:nazarnaich747@gmail.com" method="post" enctype="text/plain">
+
+      <input type="text" name="name" placeholder="Your Name" required>
+      <input type="email" name="email" placeholder="Your Email" required>
+      <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+
+      <button type="submit">Send Message</button>
+
+    </form>
+
+    <div class="btns" style="text-align:center;margin-top:20px;">
+      <a class="btn whatsapp" href="https://wa.me/923704517520">WhatsApp Direct</a>
+      <a class="btn call" href="tel:03704517520">Call Now</a>
+    </div>
+
   </div>
 </section>
 
@@ -212,3 +246,5 @@ html
 
 </body>
 </html>
+
+🔥 AB YE REAL CLIENT READY WEBSITE HAI (FIVERR LEVEL)
