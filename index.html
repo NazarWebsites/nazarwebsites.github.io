@@ -1,6 +1,6 @@
 # Nazar Websites — Business Website Pages (HTML Structure)
 
-## 1. Home Page (index.html)
+## 1. Premium Home Page (index.html)
 
 ```html
 <!DOCTYPE html>
@@ -10,12 +10,16 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Nazar Websites | Professional Web Development</title>
   <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
 
 <header>
   <nav>
     <div class="logo">Nazar Websites</div>
+
     <ul>
       <li><a href="index.html">Home</a></li>
       <li><a href="about.html">About</a></li>
@@ -27,39 +31,64 @@
 </header>
 
 <section class="hero">
-  <div class="hero-content">
-    <h1>Professional Websites For Your Business</h1>
-    <p>I create modern, fast and attractive websites for businesses and brands.</p>
-    <a href="contact.html" class="btn">Hire Me</a>
+
+  <div class="hero-left">
+    <span class="tag">Professional Web Developer</span>
+
+    <h1>
+      Modern Websites <br>
+      For Your Business
+    </h1>
+
+    <p>
+      I create modern, responsive and premium business websites
+      that help brands grow online.
+    </p>
+
+    <div class="hero-buttons">
+      <a href="https://wa.me/923704517520" class="whatsapp-btn">WhatsApp Me</a>
+
+      <a href="tel:03704517520" class="call-btn">Call Now</a>
+    </div>
   </div>
+
+  <div class="hero-right">
+    <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085" alt="Web Development">
+  </div>
+
 </section>
 
 <section class="services-preview">
+
   <h2>My Services</h2>
+
   <div class="cards">
+
     <div class="card">
       <h3>Business Websites</h3>
-      <p>Modern business websites with premium design.</p>
+      <p>Premium business websites with modern UI design.</p>
     </div>
 
     <div class="card">
       <h3>Landing Pages</h3>
-      <p>High converting landing pages for brands.</p>
+      <p>High converting landing pages for brands and startups.</p>
     </div>
 
     <div class="card">
-      <h3>Portfolio Websites</h3>
-      <p>Personal and company portfolio websites.</p>
+      <h3>E-Commerce Stores</h3>
+      <p>Responsive online stores with professional layouts.</p>
     </div>
+
   </div>
 </section>
 
-<section class="about-short">
-  <h2>About Me</h2>
-  <p>
-    My name is Nazar Naich and I work as a professional web developer.
-    I help businesses build strong online presence with modern websites.
-  </p>
+<section class="contact-banner">
+  <h2>Need A Professional Website?</h2>
+  <p>Contact Nazar Websites Today</p>
+
+  <a href="https://wa.me/923704517520" class="big-whatsapp">
+    Chat On WhatsApp
+  </a>
 </section>
 
 <footer>
@@ -240,24 +269,28 @@
 
 ---
 
-## 6. CSS File (style.css)
+## 6. Premium CSS File (style.css)
 
 ```css
 *{
   margin:0;
   padding:0;
   box-sizing:border-box;
-  font-family:Arial, sans-serif;
+  font-family:'Poppins', sans-serif;
 }
 
 body{
-  background:#0f172a;
+  background:#07111f;
   color:white;
 }
 
 header{
-  background:#111827;
-  padding:20px;
+  width:100%;
+  padding:20px 10%;
+  background:#081120;
+  position:sticky;
+  top:0;
+  z-index:1000;
 }
 
 nav{
@@ -266,116 +299,191 @@ nav{
   align-items:center;
 }
 
+.logo{
+  font-size:32px;
+  font-weight:700;
+  color:#00d4ff;
+}
+
 nav ul{
   display:flex;
   list-style:none;
-  gap:20px;
+  gap:25px;
 }
 
 nav ul li a{
   color:white;
   text-decoration:none;
+  transition:0.3s;
 }
 
-.logo{
-  font-size:28px;
-  font-weight:bold;
-  color:#38bdf8;
+nav ul li a:hover{
+  color:#00d4ff;
 }
 
 .hero{
-  height:90vh;
+  min-height:100vh;
   display:flex;
-  justify-content:center;
   align-items:center;
-  text-align:center;
-  padding:20px;
+  justify-content:space-between;
+  padding:80px 10%;
+  gap:50px;
+}
+
+.hero-left{
+  flex:1;
+}
+
+.tag{
+  background:#0ea5e9;
+  color:black;
+  padding:8px 18px;
+  border-radius:30px;
+  font-weight:600;
 }
 
 .hero h1{
-  font-size:55px;
-  margin-bottom:20px;
+  font-size:65px;
+  line-height:1.2;
+  margin-top:25px;
 }
 
 .hero p{
-  font-size:20px;
-  margin-bottom:25px;
-}
-
-.btn{
-  background:#38bdf8;
-  padding:12px 30px;
-  text-decoration:none;
-  color:black;
-  font-weight:bold;
-  border-radius:8px;
-}
-
-.services-preview,
-.about-short,
-.services-page,
-.portfolio-grid,
-.contact-section{
-  padding:80px 10%;
-}
-
-.cards,
-.portfolio-grid{
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-  gap:25px;
-}
-
-.card,
-.service-box,
-.project-card{
-  background:#1e293b;
-  padding:30px;
-  border-radius:12px;
-}
-
-.project-card img{
-  width:100%;
-  border-radius:10px;
-}
-
-.page-banner{
-  text-align:center;
-  padding:80px 20px;
-  background:#1e293b;
-}
-
-form{
-  display:flex;
-  flex-direction:column;
-  gap:20px;
-}
-
-input,
-textarea{
-  padding:15px;
-  border:none;
-  border-radius:8px;
-}
-
-button{
-  padding:15px;
-  border:none;
-  background:#38bdf8;
+  margin-top:20px;
   font-size:18px;
-  font-weight:bold;
-  border-radius:8px;
-  cursor:pointer;
+  color:#cbd5e1;
+  line-height:1.8;
+}
+
+.hero-buttons{
+  margin-top:35px;
+  display:flex;
+  gap:20px;
+  flex-wrap:wrap;
+}
+
+.whatsapp-btn,
+.call-btn,
+.big-whatsapp{
+  text-decoration:none;
+  padding:15px 30px;
+  border-radius:12px;
+  font-weight:600;
+  transition:0.3s;
+}
+
+.whatsapp-btn,
+.big-whatsapp{
+  background:#22c55e;
+  color:white;
+}
+
+.call-btn{
+  background:#0ea5e9;
+  color:white;
+}
+
+.whatsapp-btn:hover,
+.call-btn:hover,
+.big-whatsapp:hover{
+  transform:translateY(-5px);
+}
+
+.hero-right{
+  flex:1;
+}
+
+.hero-right img{
+  width:100%;
+  border-radius:25px;
+  box-shadow:0 0 30px rgba(0,212,255,0.3);
+}
+
+.services-preview{
+  padding:100px 10%;
+}
+
+.services-preview h2{
+  text-align:center;
+  font-size:45px;
+  margin-bottom:50px;
+}
+
+.cards{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+  gap:30px;
+}
+
+.card{
+  background:#111c2e;
+  padding:40px 30px;
+  border-radius:20px;
+  transition:0.3s;
+}
+
+.card:hover{
+  transform:translateY(-10px);
+  border:1px solid #0ea5e9;
+}
+
+.card h3{
+  font-size:28px;
+  margin-bottom:15px;
+}
+
+.card p{
+  color:#cbd5e1;
+  line-height:1.7;
+}
+
+.contact-banner{
+  text-align:center;
+  padding:100px 10%;
+  background:#0f172a;
+}
+
+.contact-banner h2{
+  font-size:50px;
+}
+
+.contact-banner p{
+  margin:20px 0 35px;
+  color:#cbd5e1;
 }
 
 footer{
+  background:#081120;
   text-align:center;
-  padding:20px;
-  background:#111827;
+  padding:25px;
+}
+
+@media(max-width:900px){
+
+  .hero{
+    flex-direction:column;
+    text-align:center;
+  }
+
+  .hero h1{
+    font-size:45px;
+  }
+
+  nav{
+    flex-direction:column;
+    gap:20px;
+  }
+
+  nav ul{
+    flex-wrap:wrap;
+    justify-content:center;
+  }
+
+  .hero-buttons{
+    justify-content:center;
+  }
 }
 ```
-
----
 
 # Website Name Ideas
 
