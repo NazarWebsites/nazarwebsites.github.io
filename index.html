@@ -1,278 +1,248 @@
+         html
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>NCT College - National College of Computing & Technology</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Nazar Websites | Professional Web Development Agency</title>
 
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
-<style>
-body{
-font-family: 'Segoe UI', sans-serif;
-background:#f4f6f9;
-}
+  <style>
 
-.navbar{
-background:#0A2342;
-}
+  :root{
+    --bg:#0b1220;
+    --card:#111c2e;
+    --text:#e5e7eb;
+    --primary:#38bdf8;
+    --green:#22c55e;
+    --gold:#fbbf24;
+  }
 
-.navbar-brand, .nav-link{
-color:white !important;
-font-weight:600;
-}
+  *{margin:0;padding:0;box-sizing:border-box;font-family:'Poppins',sans-serif;}
 
-.hero{
-background:linear-gradient(rgba(10,35,66,0.85),rgba(10,35,66,0.85)),
-url('https://images.unsplash.com/photo-1523050854058-8df90110c9f1');
-background-size:cover;
-background-position:center;
-height:90vh;
-color:white;
-display:flex;
-align-items:center;
-text-align:center;
-}
+  body{
+    background:var(--bg);
+    color:var(--text);
+    scroll-behavior:smooth;
+  }
 
-.hero h1{
-font-size:50px;
-font-weight:bold;
-}
+  /* NAV */
+  .nav{
+    position:fixed;
+    top:0;
+    width:100%;
+    background:#0f172a;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:15px 8%;
+    z-index:1000;
+  }
 
-.btn-gold{
-background:#D4AF37;
-color:black;
-font-weight:bold;
-padding:10px 20px;
-border:none;
-}
+  .logo{color:var(--primary);font-weight:700;font-size:20px;}
 
-.section-title{
-text-align:center;
-font-weight:bold;
-color:#0A2342;
-margin-bottom:40px;
-}
+  .nav a{
+    color:white;
+    text-decoration:none;
+    margin:0 8px;
+    font-size:14px;
+  }
 
-.card{
-border:none;
-box-shadow:0 0 15px rgba(0,0,0,0.08);
-transition:0.3s;
-border-radius:10px;
-}
+  .nav a:hover{color:var(--primary);}
 
-.card:hover{
-transform:translateY(-5px);
-}
+  /* HERO */
+  .hero{
+    padding:130px 10% 70px;
+    text-align:center;
+  }
 
-.badge-custom{
-background:#D4AF37;
-color:black;
-padding:5px 10px;
-border-radius:5px;
-font-size:12px;
-}
+  .hero h1{
+    font-size:50px;
+    margin-bottom:15px;
+  }
 
-footer{
-background:#0A2342;
-color:white;
-padding:30px;
-margin-top:40px;
-}
-</style>
+  .hero p{color:#cbd5e1;font-size:18px;}
 
+  .btns{margin-top:25px;}
+
+  .btn{
+    display:inline-block;
+    padding:12px 22px;
+    margin:5px;
+    border-radius:10px;
+    text-decoration:none;
+    font-weight:600;
+  }
+
+  .whatsapp{background:var(--green);color:white;}
+  .call{background:var(--primary);color:white;}
+
+  /* SECTIONS */
+  section{padding:70px 10%;}
+
+  h2{
+    font-size:32px;
+    margin-bottom:20px;
+    color:var(--gold);
+    text-align:center;
+  }
+
+  .card{
+    background:var(--card);
+    padding:25px;
+    border-radius:15px;
+    margin-bottom:20px;
+  }
+
+  .grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:20px;
+  }
+
+  .box{
+    background:#0f172a;
+    padding:20px;
+    border-radius:12px;
+    text-align:center;
+  }
+
+  /* CONTACT FORM */
+  form{
+    display:flex;
+    flex-direction:column;
+    gap:15px;
+    max-width:600px;
+    margin:auto;
+  }
+
+  input,textarea{
+    padding:12px;
+    border:none;
+    border-radius:8px;
+    outline:none;
+  }
+
+  button{
+    background:var(--primary);
+    color:white;
+    padding:12px;
+    border:none;
+    border-radius:8px;
+    font-weight:600;
+    cursor:pointer;
+  }
+
+  footer{
+    text-align:center;
+    padding:20px;
+    background:#050814;
+  }
+
+  @media(max-width:768px){
+    .hero h1{font-size:32px;}
+    .nav{flex-direction:column;gap:10px;}
+  }
+
+  </style>
 </head>
-
 <body>
 
-<!-- NAVBAR -->
-<nav class="navbar navbar-expand-lg">
-<div class="container">
-<a class="navbar-brand" href="#">NCT College</a>
+<!-- NAV -->
+<div class="nav">
+  <div class="logo">NazarWebsites</div>
+  <div>
+    <a href="#home">Home</a>
+    <a href="#services">Services</a>
+    <a href="#about">About</a>
+    <a href="#portfolio">Portfolio</a>
+    <a href="#contact">Contact</a>
+  </div>
 </div>
-</nav>
 
 <!-- HERO -->
-<section class="hero">
-<div class="container">
-<h1>National College of Computing & Technology</h1>
-<p class="lead">Build Your Future With Professional Skills</p>
-<p>Opening Date: <b>15 April 2026</b></p>
-<a href="#" class="btn btn-gold btn-lg mt-3">Apply For Admission</a>
-</div>
+<section id="home" class="hero">
+  <h1>Professional Web Development Agency</h1>
+  <p>Modern, fast and responsive websites for businesses, brands & startups</p>
+
+  <div class="btns">
+    <a class="btn whatsapp" href="https://wa.me/923704517520">WhatsApp</a>
+    <a class="btn call" href="tel:03704517520">Call Now</a>
+  </div>
+</section>
+
+<!-- SERVICES -->
+<section id="services">
+  <h2>My Services</h2>
+  <div class="grid">
+
+    <div class="box">Business Website</div>
+    <div class="box">Landing Page</div>
+    <div class="box">E-Commerce Store</div>
+    <div class="box">Portfolio Website</div>
+    <div class="box">Restaurant Website</div>
+    <div class="box">Custom Design</div>
+
+  </div>
 </section>
 
 <!-- ABOUT -->
-<section class="py-5">
-<div class="container">
-<h2 class="section-title">About Our College</h2>
-<p class="text-center">
-National College of Computing & Technology ایک modern institute ہے جہاں students کو practical skills، freelancing، IT courses اور professional training دی جاتی ہے تاکہ وہ اپنا مستقبل خود بنا سکیں۔
-</p>
-</div>
+<section id="about">
+  <div class="card">
+    <h2>About Nazar Websites</h2>
+    <p>
+      We create modern and professional websites that help businesses grow online.
+      Our focus is on clean design, mobile responsiveness, fast loading speed
+      and client satisfaction.
+    </p>
+  </div>
 </section>
 
-<!-- COURSES -->
-<section class="py-5 bg-light">
-<div class="container">
-<h2 class="section-title">Our Courses & Fees</h2>
-
-<div class="row g-4">
-
-<div class="col-md-4">
-<div class="card p-3">
-<h5>Architecture Diploma</h5>
-<span class="badge-custom">1 Year</span>
-<p>2D/3D Designing, AutoCAD, Building Plans</p>
-<b>Fee: 120,000 PKR</b>
-</div>
-</div>
-
-<div class="col-md-4">
-<div class="card p-3">
-<h5>Web Development Diploma</h5>
-<span class="badge-custom">1 Year</span>
-<p>HTML, CSS, JavaScript, PHP, MySQL</p>
-<b>Fee: 120,000 PKR</b>
-</div>
-</div>
-
-<div class="col-md-4">
-<div class="card p-3">
-<h5>AI Course</h5>
-<span class="badge-custom">4 Months</span>
-<p>ChatGPT, AI Tools, Prompt Engineering</p>
-<b>Fee: 40,000 PKR</b>
-</div>
-</div>
-
-<div class="col-md-4">
-<div class="card p-3">
-<h5>Graphic Designing</h5>
-<span class="badge-custom">6 Months</span>
-<p>Photoshop, Illustrator, Branding</p>
-<b>Fee: 60,000 PKR</b>
-</div>
-</div>
-
-<div class="col-md-4">
-<div class="card p-3">
-<h5>Freelancing & Fiverr</h5>
-<span class="badge-custom">3 Months</span>
-<p>Gig Creation, Client Handling, Online Earning</p>
-<b>Fee: 30,000 PKR</b>
-</div>
-</div>
-
-<div class="col-md-4">
-<div class="card p-3">
-<h5>Office Management</h5>
-<span class="badge-custom">2 Months</span>
-<p>MS Word, Excel, PowerPoint</p>
-<b>Fee: 20,000 PKR</b>
-</div>
-</div>
-
-<div class="col-md-4">
-<div class="card p-3">
-<h5>Computer Basic</h5>
-<span class="badge-custom">1 Month</span>
-<p>Windows, Typing, Internet, Email</p>
-<b>Fee: 10,000 PKR</b>
-</div>
-</div>
-
-<div class="col-md-4">
-<div class="card p-3">
-<h5>Data Entry</h5>
-<span class="badge-custom">3 Months</span>
-<p>Excel, Google Sheets, Typing Practice</p>
-<b>Fee: 30,000 PKR</b>
-</div>
-</div>
-
-</div>
-</div>
-</section>
-
-<!-- MISSION & VISION -->
-<section class="py-5">
-<div class="container">
-<h2 class="section-title">Mission & Vision</h2>
-
-<div class="row">
-<div class="col-md-6">
-<h4>Mission</h4>
-<p>Students ko modern education aur practical skills de kar unko self-dependent banana.</p>
-</div>
-
-<div class="col-md-6">
-<h4>Vision</h4>
-<p>Pakistan ka leading IT aur professional training institute banنا.</p>
-</div>
-</div>
-
-</div>
-</section>
-
-<!-- TEACHERS -->
-<section class="py-5 bg-light">
-<div class="container">
-<h2 class="section-title">Our Teachers</h2>
-
-<div class="row g-4 text-center">
-
-<div class="col-md-3">
-<div class="card p-3">
-<h5>Ahtsham Naich</h5>
-<p>Architecture & Data Entry</p>
-</div>
-</div>
-
-<div class="col-md-3">
-<div class="card p-3">
-<h5>Hashaam Naich</h5>
-<p>Senior Instructor (Web, AI, Freelancing)</p>
-</div>
-</div>
-
-<div class="col-md-3">
-<div class="card p-3">
-<h5>Muhammad Bilal</h5>
-<p>AI Specialist</p>
-</div>
-</div>
-
-<div class="col-md-3">
-<div class="card p-3">
-<h5>Ahsaan Ali</h5>
-<p>Architecture Designer (2D/3D)</p>
-</div>
-</div>
-
-</div>
-</div>
+<!-- PORTFOLIO -->
+<section id="portfolio">
+  <h2>Portfolio</h2>
+  <div class="grid">
+    <div class="box">Restaurant Website</div>
+    <div class="box">Business Website</div>
+    <div class="box">E-Commerce Store</div>
+    <div class="box">Landing Page Design</div>
+  </div>
 </section>
 
 <!-- CONTACT -->
-<section class="py-5">
-<div class="container text-center">
-<h2 class="section-title">Contact Us</h2>
+<section id="contact">
+  <h2>Contact Us</h2>
 
-<p>📍 Chak No. 747 GB, Tehsil Pir Mahal, Toba Tek Singh</p>
-<p>📧 ahtshamnaich@gmail.com</p>
+  <div class="card">
 
-<p>📞 03155465747 | 03103355747 | 03703807596 | 03156256747</p>
+    <p style="text-align:center; margin-bottom:15px;">
+      📧 Email: nazarnaich747@gmail.com <br>
+      📞 Phone: 03704517520
+    </p>
 
-</div>
+    <!-- CONTACT FORM -->
+    <form action="mailto:nazarnaich747@gmail.com" method="post" enctype="text/plain">
+
+      <input type="text" name="name" placeholder="Your Name" required>
+      <input type="email" name="email" placeholder="Your Email" required>
+      <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+
+      <button type="submit">Send Message</button>
+
+    </form>
+
+    <div class="btns" style="text-align:center;margin-top:20px;">
+      <a class="btn whatsapp" href="https://wa.me/923704517520">WhatsApp Direct</a>
+      <a class="btn call" href="tel:03704517520">Call Now</a>
+    </div>
+
+  </div>
 </section>
 
-<!-- FOOTER -->
-<footer class="text-center">
-<h5>NCT - National College of Computing & Technology</h5>
-<p>Opening Date: 15 April 2026</p>
-<p>© 2026 All Rights Reserved</p>
+<footer>
+  © 2026 Nazar Websites | All Rights Reserved
 </footer>
 
 </body>
-</html>
+</html> 
